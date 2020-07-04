@@ -38,7 +38,8 @@ jobs:
           name: Authorize Target Deployment Org
           command: |
             #Authorize target org
-            sfdx force:auth:jwt:grant --instanceurl $ENDPOINT  --clientid $CONSUMER_KEY --jwtkeyfile server.key --username $USER_NAME --setalias UAT
+            #sfdx force:auth:jwt:grant --instanceurl $ENDPOINT  --clientid $CONSUMER_KEY --jwtkeyfile server.key --username $USER_NAME --setalias UAT
+            sfdx force:auth:jwt:grant --instanceurl https://login.salesforce.com  --clientid 3MVG9Kip4IKAZQEXy3zNkX1BuTy3cU0G6BeBc2krUk6GTu71BluQ7RSQyZzm2k8nHFLVynKBr0kdlwV56btRc --jwtkeyfile server.key --username bz@nteligroup.com.ntelirentaldev --setalias UAT
       - run:
           name: Deploy to Target Deployment Org
           command: |
