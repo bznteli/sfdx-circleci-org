@@ -50,7 +50,7 @@ jobs:
             #sfdx force:mdapi:deploy --checkonly --wait 10 --deploydir $DEPLOYDIR --targetusername UAT --testlevel $TESTLEVEL
 workflows:
   version: 2
-  build_and_test:
+  build:
     jobs:
       build:
         filters:
